@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/andrewprofile-promotion/promotion" method="POST">
+		<service class="Andrewprofile\Promotion\Api\PromotionRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_save"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion/search" method="GET">
+		<service class="Andrewprofile\Promotion\Api\PromotionRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_view"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion/:promotionId" method="GET">
+		<service class="Andrewprofile\Promotion\Api\PromotionRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_view"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion/:promotionId" method="PUT">
+		<service class="Andrewprofile\Promotion\Api\PromotionRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_update"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion/:promotionId" method="DELETE">
+		<service class="Andrewprofile\Promotion\Api\PromotionRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_delete"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion-group" method="POST">
+		<service class="Andrewprofile\Promotion\Api\PromotionGroupRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_Group_save"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion-group/search" method="GET">
+		<service class="Andrewprofile\Promotion\Api\PromotionGroupRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_Group_view"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion-group/:promotionGroupId" method="GET">
+		<service class="Andrewprofile\Promotion\Api\PromotionGroupRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_Group_view"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion-group/:promotionGroupId" method="PUT">
+		<service class="Andrewprofile\Promotion\Api\PromotionGroupRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_Group_update"/>
+		</resources>
+	</route>
+	<route url="/V1/andrewprofile-promotion/promotion-group/:promotionGroupId" method="DELETE">
+		<service class="Andrewprofile\Promotion\Api\PromotionGroupRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Andrewprofile_Promotion::Promotion_Group_delete"/>
+		</resources>
+	</route>
+    <route url="/V1/andrewprofile-promotion/promotion-group-promotion" method="POST">
+        <service class="Andrewprofile\Promotion\Api\PromotionGroupPromotionRepositoryInterface" method="create"/>
+        <resources>
+            <resource ref="Andrewprofile_Promotion::Promotion_Group_Promotion_save"/>
+        </resources>
+    </route>
+    <route url="/V1/andrewprofile-promotion/promotion-group-promotion/:promotionId/promotion_group" method="GET">
+        <service class="Andrewprofile\Promotion\Api\PromotionGroupPromotionRepositoryInterface" method="getPromotionGroupByPromotionId"/>
+        <resources>
+            <resource ref="Andrewprofile_Promotion::Promotion_Group_Promotion_view"/>
+        </resources>
+    </route>
+    <route url="/V1/andrewprofile-promotion/promotion-group-promotion/:promotionGroupId/promotion" method="GET">
+        <service class="Andrewprofile\Promotion\Api\PromotionGroupPromotionRepositoryInterface" method="getPromotionByPromotionGroupId"/>
+        <resources>
+            <resource ref="Andrewprofile_Promotion::Promotion_Group_Promotion_view"/>
+        </resources>
+    </route>
+    <route url="/V1/andrewprofile-promotion/promotion-group-promotion/:promotionId/:promotionGroupId" method="DELETE">
+        <service class="Andrewprofile\Promotion\Api\PromotionGroupPromotionRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Andrewprofile_Promotion::Promotion_Group_Promotion_delete"/>
+        </resources>
+    </route>
+</routes>

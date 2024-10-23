@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="andrewprofile_promotion_promotion" resource="default" engine="innodb" comment="andrewprofile_promotion_promotion Table">
+		<column xsi:type="int" name="promotion_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="promotion_id"/>
+		</constraint>
+		<column name="name" nullable="true" xsi:type="text" comment="name"/>
+		<column name="created_at" nullable="true" xsi:type="timestamp" comment="created_at" default="CURRENT_TIMESTAMP" on_update="false"/>
+		<column name="updated_at" nullable="true" xsi:type="timestamp" comment="updated_at" default="CURRENT_TIMESTAMP" on_update="true"/>
+	</table>
+	<table name="andrewprofile_promotion_promotion_group" resource="default" engine="innodb" comment="andrewprofile_promotion_promotion_group Table">
+		<column xsi:type="int" name="promotion_group_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="promotion_group_id"/>
+		</constraint>
+		<column name="name" nullable="true" xsi:type="text" comment="name"/>
+		<column name="created_at" nullable="true" xsi:type="timestamp" comment="created_at" default="CURRENT_TIMESTAMP" on_update="false"/>
+		<column name="updated_at" nullable="true" xsi:type="timestamp" comment="updated_at" default="CURRENT_TIMESTAMP" on_update="true"/>
+	</table>
+	<table name="andrewprofile_promotion_promotion_group_promotion" resource="default" engine="innodb" comment="andrewprofile_promotion_promotion_group_promotion Table">
+		<column xsi:type="int" name="promotion_group_promotion_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="promotion_group_promotion_id"/>
+		</constraint>
+		<column name="promotion_id" nullable="false" unsigned="true" xsi:type="int" comment="promotion_id" identity="false"/>
+		<column name="promotion_group_id" nullable="false" unsigned="true" xsi:type="int" comment="promotion_group_id" identity="false"/>
+        <constraint xsi:type="foreign" referenceId="P_PG_P_ID_P_ID" table="andrewprofile_promotion_promotion_group_promotion" column="promotion_id" referenceTable="andrewprofile_promotion_promotion" referenceColumn="promotion_id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="P_PG_PG_ID_PG_ID" table="andrewprofile_promotion_promotion_group_promotion" column="promotion_group_id" referenceTable="andrewprofile_promotion_promotion_group" referenceColumn="promotion_group_id" onDelete="CASCADE"/>
+        <index referenceId="PROMOTION_PROMOTION_GROUP_PROMOTION_PROMOTION_ID" indexType="btree">
+            <column name="promotion_id"/>
+        </index>
+        <index referenceId="PROMOTION_PROMOTION_GROUP_PROMOTION_PROMOTION_GROUP_ID" indexType="btree">
+            <column name="promotion_group_id"/>
+        </index>
+	</table>
+</schema>

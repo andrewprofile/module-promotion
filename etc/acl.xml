@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Andrewprofile_Promotion::Promotion" title="Promotion" sortOrder="10">
+					<resource id="Andrewprofile_Promotion::Promotion_save" title="Save Promotion" sortOrder="10"/>
+					<resource id="Andrewprofile_Promotion::Promotion_delete" title="Delete Promotion" sortOrder="20"/>
+					<resource id="Andrewprofile_Promotion::Promotion_update" title="Update Promotion" sortOrder="30"/>
+					<resource id="Andrewprofile_Promotion::Promotion_view" title="View Promotion" sortOrder="40"/>
+				</resource>
+				<resource id="Andrewprofile_Promotion::Promotion_Group" title="Promotion_Group" sortOrder="10">
+					<resource id="Andrewprofile_Promotion::Promotion_Group_save" title="Save Promotion_Group" sortOrder="10"/>
+					<resource id="Andrewprofile_Promotion::Promotion_Group_delete" title="Delete Promotion_Group" sortOrder="20"/>
+					<resource id="Andrewprofile_Promotion::Promotion_Group_update" title="Update Promotion_Group" sortOrder="30"/>
+					<resource id="Andrewprofile_Promotion::Promotion_Group_view" title="View Promotion_Group" sortOrder="40"/>
+				</resource>
+                <resource id="Andrewprofile_Promotion::Promotion_Group_Promotion" title="Promotion_Group_Promotion" sortOrder="10">
+                    <resource id="Andrewprofile_Promotion::Promotion_Group_Promotion_save" title="Save Promotion_Group_Promotion" sortOrder="10"/>
+                    <resource id="Andrewprofile_Promotion::Promotion_Group_Promotion_delete" title="Delete Promotion_Group_Promotion" sortOrder="20"/>
+                    <resource id="Andrewprofile_Promotion::Promotion_Group_Promotion_update" title="Update Promotion_Group_Promotion" sortOrder="30"/>
+                    <resource id="Andrewprofile_Promotion::Promotion_Group_Promotion_view" title="View Promotion_Group_Promotion" sortOrder="40"/>
+                </resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

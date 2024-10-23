@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Andrewprofile\Promotion\Api\PromotionRepositoryInterface" type="Andrewprofile\Promotion\Model\PromotionRepository"/>
+    <preference for="Andrewprofile\Promotion\Api\Data\BasicPromotionInterface" type="Andrewprofile\Promotion\Model\Promotion"/>
+	<preference for="Andrewprofile\Promotion\Api\Data\PromotionInterface" type="Andrewprofile\Promotion\Model\Promotion"/>
+	<preference for="Andrewprofile\Promotion\Api\Data\PromotionSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<preference for="Andrewprofile\Promotion\Api\PromotionGroupRepositoryInterface" type="Andrewprofile\Promotion\Model\PromotionGroupRepository"/>
+	<preference for="Andrewprofile\Promotion\Api\Data\PromotionGroupInterface" type="Andrewprofile\Promotion\Model\PromotionGroup"/>
+	<preference for="Andrewprofile\Promotion\Api\Data\PromotionGroupSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<preference for="Andrewprofile\Promotion\Api\PromotionGroupPromotionRepositoryInterface" type="Andrewprofile\Promotion\Model\PromotionGroupPromotionRepository"/>
+	<preference for="Andrewprofile\Promotion\Api\Data\PromotionGroupPromotionInterface" type="Andrewprofile\Promotion\Model\PromotionGroupPromotion"/>
+	<preference for="Andrewprofile\Promotion\Api\Data\PromotionGroupPromotionSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+</config>
