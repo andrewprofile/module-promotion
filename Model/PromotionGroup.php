@@ -36,7 +36,10 @@ class PromotionGroup extends AbstractModel implements PromotionGroupInterface
      */
     public function _construct()
     {
-        $this->_init(ResourceModel\PromotionGroup::class);
+        try {
+            $this->_init(ResourceModel\PromotionGroup::class);
+        }
+        catch (\Exception $e) {}
     }
 
     /**

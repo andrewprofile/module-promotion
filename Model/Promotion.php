@@ -37,7 +37,9 @@ class Promotion extends AbstractModel implements PromotionInterface
      */
     public function _construct()
     {
-        $this->_init(ResourceModel\Promotion::class);
+        try {
+            $this->_init(ResourceModel\Promotion::class);
+        } catch (\Exception $e) {}
     }
 
     /**
@@ -102,11 +104,6 @@ class Promotion extends AbstractModel implements PromotionInterface
     public function setUpdatedAt($updatedAt)
     {
         return $this->setData(self::UPDATED_AT, $updatedAt);
-    }
-
-    public function getPromotionGroups()
-    {
-
     }
 
     /**
