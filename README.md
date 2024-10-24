@@ -6,7 +6,7 @@ Promotion and Promotion Group module for Magento 2
 
 ### Type 1: Zip file
 
-- Download from repository https://github.com/andrewprofile/module-promotion by zip
+- Download code from repository https://github.com/andrewprofile/module-promotion by zip
 - Unzip the zip files in `app/code/Andrewprofile/Promotion`
 - Enable the module by running `php bin/magento module:enable Andrewprofile_Promotion`
 - Apply database updates by running `php bin/magento setup:upgrade` _(1)_
