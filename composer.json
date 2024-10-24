@@ -1,0 +1,22 @@
+{
+    "name": "andrewprofile/module-promotion",
+    "description": "Promotion and Promotion Group module for Magento 2",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Andrzej Kostrzewa",
+            "email": "andkos11@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Andrewprofile\\Promotion\\": ""
+        }
+    }
+}
